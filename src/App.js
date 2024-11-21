@@ -1,4 +1,6 @@
 import Login from "./pages/Login";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -15,9 +17,9 @@ function App() {
   ]);
 
   return (
-    <div>
+    <Provider store={store}>
       <RouterProvider router={appRouter} />
-    </div>
+    </Provider>
   );
 }
 
