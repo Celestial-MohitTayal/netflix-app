@@ -19,7 +19,7 @@ const VideoTitle = ({ title, description }) => {
           px: 10,
           fontWeight: "bold",
           color: "white",
-          fontSize: { xs: "2rem", sm: "3rem", md: "4rem", lg: "5rem" },
+          fontSize: { xs: "1.5rem", sm: "3rem", md: "4rem", lg: "5rem" },
         }}
       >
         {title.split("|")[0]}
@@ -30,8 +30,8 @@ const VideoTitle = ({ title, description }) => {
           px: 10,
           py: 2,
           color: "white",
-          fontSize: { xs: "0.875rem", xl: "1rem" },
-          width: { xl: "50%" },
+          fontSize: { xs: "0.6rem", xl: "1rem" },
+          width: { xs: "75%", xl: "50%" },
         }}
       >
         {description.split(".")[0]}
@@ -49,7 +49,7 @@ const VideoTitle = ({ title, description }) => {
             py: 1.5,
             px: 4,
             borderRadius: "8px",
-            fontSize: "1rem",
+            fontSize: { xs: "0.6rem", xl: "1rem" },
             fontWeight: "bold",
             boxShadow: 3,
             "&:hover": {
@@ -68,7 +68,7 @@ const VideoTitle = ({ title, description }) => {
             py: 1.5,
             px: 2,
             borderRadius: "8px",
-            fontSize: "1rem",
+            fontSize: { xs: "0.6rem", xl: "1rem" },
             fontWeight: "bold",
             boxShadow: 3,
             ml: 2,

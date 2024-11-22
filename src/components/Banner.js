@@ -4,7 +4,7 @@ import VideoBg from "./videoBg";
 import VideoTitle from "./videoTitle";
 
 const Banner = () => {
-  const movies = useSelector((store) => store.movies?.mostPopularVideos);
+  const movies = useSelector((store) => store.movies);
   if (!movies) return;
 
   const mainMovieId = movies[0].id;

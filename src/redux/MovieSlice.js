@@ -2,18 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const movieSlice = createSlice({
   name: "movies",
-  initialState: {
-    mostPopularVideos: null,
-  },
+  initialState: null,
   reducers: {
     addVideos: (state, action) => {
-      state.mostPopularVideos = action.payload;
+      return action.payload;
     },
     removeVideos: (state, action) => {
-      return null;
+      return null
     },
   },
 });
 
-export const { addVideos } = movieSlice.actions;
+export const { addVideos, removeVideos } = movieSlice.actions;
 export default movieSlice.reducer;

@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 
 const MovieCard = ({ videoURL, videoALT }) => {
+  // console.log(videoURL, videoALT);
   return (
     <Box
       sx={{

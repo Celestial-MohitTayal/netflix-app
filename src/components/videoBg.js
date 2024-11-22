@@ -1,7 +1,6 @@
-import React from "react";
 import { Box } from "@mui/material";
 
-const VideoBg = ({ movieId }) => {
+const VideoBg = ({ movieid }) => {
   return (
     <Box
       sx={{
@@ -11,11 +10,7 @@ const VideoBg = ({ movieId }) => {
       }}
     >
       <iframe
-        src={
-          "https://www.youtube.com/embed/" +
-          movieId +
-          "?si=KAy9QAkVJSdr4XmP?&autoplay=1&mute=1"
-        }
+        src={"https://www.youtube.com/embed/" + movieid + "?&autoplay=1&mute=1"}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"

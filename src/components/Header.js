@@ -1,17 +1,9 @@
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  IconButton,
-  Avatar,
-  Button,
-  Box,
-} from "@mui/material";
+import { AppBar, Toolbar, Avatar, Button, Box } from "@mui/material";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addUser, removeUser } from "../redux/UserSlice";
-import removeVideos from "../redux/MovieSlice";
+import { removeVideos } from "../redux/MovieSlice";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -65,7 +57,7 @@ const Header = () => {
             <Button
               onClick={() => {
                 dispatch(removeUser());
-                // dispatch(removeVideos());
+                dispatch(removeVideos());
                 localStorage.removeItem("userDetails");
                 navigate("/");
               }}

@@ -56,8 +56,6 @@ const Login = () => {
   return (
     <div>
       <Header />
-
-      {/* Background Image  */}
       <Box sx={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }}>
         <img
           src="https://assets.nflxext.com/ffe/siteui/vlv3/03ad76d1-e184-4d99-ae7d-708672fa1ac2/web/IN-en-20241111-TRIFECTA-perspective_149877ab-fcbd-4e4f-a885-8d6174a1ee81_large.jpg"
@@ -65,8 +63,6 @@ const Login = () => {
           style={{ height: "100vh", width: "100%", objectFit: "cover" }}
         />
       </Box>
-
-      {/* Form */}
       <Box
         sx={{
           position: "absolute",
@@ -82,7 +78,6 @@ const Login = () => {
           textAlign: "center",
         }}
       >
-        
         <Typography variant="h4" sx={{ marginBottom: 2, fontWeight: "bold" }}>
           {isSignIn ? "Sign In" : "Sign Up"}
         </Typography>
