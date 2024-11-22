@@ -1,8 +1,10 @@
 import MovieCard from "./MovieCard";
 import { Box, Typography } from "@mui/material";
-// , searchWord = ''
-const MovieRow = ({ title, videos }) => {
-  // console.log(start, end);
+const MovieRow = ({ title, videos, searchWord = "", start, end }) => {
+  const rowVideos = videos?.slice(start, end);
+  const filteredVideos = rowVideos?.filter((video) =>
+    video.snippet.title.toLowerCase().match(searchWord.toLowerCase())
+  );
   return (
     <Box sx={{ paddingX: 6, paddingY: 1 }}>
       <Typography
@@ -16,19 +18,13 @@ const MovieRow = ({ title, videos }) => {
       </Typography>
       <Box sx={{ display: "flex", overflowX: "auto" }}>
         <Box sx={{ display: "flex" }}>
-          {videos?.map(
-            (video, index) => (
-              // console.log(index);
-              // if (start <= index && index <= end)
-              //   console.log(start, end);
-              <MovieCard
-                key={video.id}
-                videoURL={video.snippet.thumbnails.medium.url}
-                videoALT={video.snippet.title}
-              />
-            )
-            // }
-          )}
+          {filteredVideos?.map((video, index) => (
+            <MovieCard
+              key={video.id}
+              videoURL={video.snippet.thumbnails.medium.url}
+              videoALT={video.snippet.title}
+            />
+          ))}
         </Box>
       </Box>
     </Box>

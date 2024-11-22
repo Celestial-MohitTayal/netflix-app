@@ -11,7 +11,7 @@ const useFetchVideos = () => {
   const fetchPopularVideos = async () => {
     try {
       const response = await fetch(
-        "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=id&chart=mostPopular&regionCode=IN&maxResults=12&key=" +
+        "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=id&chart=mostPopular&regionCode=IN&maxResults=48&key=" +
           API_KEY
       );
       const json = await response.json();

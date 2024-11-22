@@ -9,7 +9,7 @@ const Footer = () => {
         backgroundColor: "black",
         color: "#fff",
         py: 8,
-        px: 8,
+        px: 48,
       }}
     >
       <Box display="flex" justifyContent="start" gap={2} mb={2}>
@@ -18,7 +18,7 @@ const Footer = () => {
         </Link>
         <Link href="#" color="inherit">
           <Instagram />
-        </Link>
+        </Link>``
         <Link href="#" color="inherit">
           <Twitter />
         </Link>
@@ -27,7 +27,7 @@ const Footer = () => {
         </Link>
       </Box>
 
-      <Grid2 container spacing={36}>
+      <Grid2 container spacing={18}>
         <Grid2 item xs={6} sm={3}>
           <Typography>
             <Link href="#" color="inherit" underline="hover">
