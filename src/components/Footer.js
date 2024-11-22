@@ -18,7 +18,7 @@ const Footer = () => {
         </Link>
         <Link href="#" color="inherit">
           <Instagram />
-        </Link>``
+        </Link>
         <Link href="#" color="inherit">
           <Twitter />
         </Link>

@@ -9,14 +9,15 @@ const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const userDetails = JSON.parse(localStorage.getItem("userDetails")) || null;
+  console.log();
   useEffect(() => {
     if (!userDetails) {
       navigate("/");
     } else {
       dispatch(addUser(userDetails));
-      navigate("/home");
     }
   }, []);
+
   return (
     <AppBar
       position="absolute"
@@ -45,7 +46,8 @@ const Header = () => {
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <Avatar
               src="https://occ-0-1009-1007.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABfa2YTbBSdRCw8ROTRS4NTNn0G7BQ46lOw5X-Uwt3janZC8KIbTM91qWqWHqvalzmwR7BPCeoeRM-sfItd7r45AHApdsNEY.png?r=7e8"
-              alt="Profile"
+              alt="Go to User Profile"
+              onClick={() => {navigate("/user")}}
               sx={{
                 width: 48,
                 height: 48,

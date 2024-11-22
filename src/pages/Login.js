@@ -21,7 +21,7 @@ const Login = () => {
 
   const handleButtonClk = () => {
     const users = JSON.parse(localStorage.getItem("users")) || [];
-
+    console.log(users);
     if (isSignIn) {
       const message = SignInValidation(
         users,
