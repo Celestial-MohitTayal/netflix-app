@@ -11,6 +11,7 @@ const UserProfile = () => {
   const name = useSelector((store) => store.user.name);
   const [isForm, setIsForm] = useState(false);
   const [isName, setIsName] = useState();
+  const [msg, setMsg] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const input = useRef(null);
@@ -20,13 +21,14 @@ const UserProfile = () => {
     const index = users.findIndex((user) => user.email === email);
     if (isName) {
       users[index].name = input.current.value;
+      setMsg("Name Changed Successfully!");
     } else {
       users[index].password = input.current.value;
+      setMsg("Password Changed Successfully!")
     }
     localStorage.setItem("users", JSON.stringify(users));
     const user = users.find((user) => user.email === email);
     dispatch(addUser(user));
-
     input.current.value = "";
   };
 
@@ -97,6 +99,7 @@ const UserProfile = () => {
           onClick={() => {
             setIsForm(true);
             setIsName(true);
+            setMsg("");
           }}
           variant="contained"
           color="error"
@@ -114,6 +117,7 @@ const UserProfile = () => {
           onClick={() => {
             setIsForm(true);
             setIsName(false);
+            setMsg("");
           }}
           variant="contained"
           color="error"
@@ -163,8 +167,13 @@ const UserProfile = () => {
           </Box>
         )}
         <br />
+        <Typography variant="body2" sx={{ color: "red", marginBottom: 2 }}>
+          {msg}
+        </Typography>
+        <br/>
         <Typography
           onClick={() => {
+            setMsg("");
             navigate("/home");
           }}
           variant="body1"
