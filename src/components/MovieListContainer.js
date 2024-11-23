@@ -17,8 +17,9 @@ const MovieListContainer = () => {
         sx={{
           backgroundColor: "black",
           position: "relative",
-          zIndex: 10,
-          marginTop: { xs: "44px", sm: "-12px", xl: "-60px" },
+          zIndex: 30,
+          paddingTop: "30px",
+          marginTop: { xs: "44px", sm: "-12px", xl: "20px" },
         }}
       >
         <TextField
